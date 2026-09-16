@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Git — системи контролю версій</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>Git</h1>
+        <p>Система контролю версій для розробників</p>
+
+        <nav>
+            <a href="#about">Про Git</a>
+            <a href="#advantages">Переваги</a>
+            <a href="#commands">Команди</a>
+            <a href="#certificate">Сертифікат</a>
+            <a href="#sources">Джерела</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section id="about" class="section">
+    <div class="container">
+
+        <h2>Що таке система контролю версій?</h2>
+
+        <p>
+            Система контролю версій — це програмне забезпечення,
+            яке дозволяє відстежувати зміни у файлах проєкту,
+            зберігати різні версії та повертатися до попередніх
+            станів проєкту.
+        </p>
+
+        <p>
+            Системи контролю версій особливо важливі під час
+            розробки програмного забезпечення, оскільки над одним
+            проєктом часто працює декілька людей.
+        </p>
+
+        <h2>Що таке Git?</h2>
+
+        <p>
+            <strong>Git</strong> — це розподілена система контролю
+            версій, яка використовується для відстеження змін
+            у файлах та керування програмними проєктами.
+        </p>
+
+        <p>
+            Git був створений Лінусом Торвальдсом у 2005 році.
+            Сьогодні Git є одним із найпоширеніших інструментів
+            для роботи з програмним кодом.
+        </p>
+
+    </div>
+</section>
+
+
+<section id="advantages" class="section dark">
+    <div class="container">
+
+        <h2>Основні можливості та переваги Git</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Історія змін</h3>
+                <p>
+                    Git зберігає інформацію про зміни файлів,
+                    тому можна переглядати історію роботи над проєктом.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Гілки</h3>
+                <p>
+                    Branch дозволяє створювати окремі гілки
+                    для розробки нових функцій.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Командна робота</h3>
+                <p>
+                    Кілька розробників можуть працювати над одним
+                    проєктом та об'єднувати свої зміни.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Резервне зберігання</h3>
+                <p>
+                    Репозиторій можна зберігати на GitHub,
+                    що допомагає не втратити код.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Відновлення</h3>
+                <p>
+                    За необхідності можна повернутися
+                    до попередньої версії проєкту.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Безкоштовність</h3>
+                <p>
+                    Git є безкоштовним програмним забезпеченням
+                    з відкритим кодом.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section id="commands" class="section">
+    <div class="container">
+
+        <h2>10 базових команд Git</h2>
+
+        <div class="commands">
+
+            <div class="command">
+                <h3>1. git init</h3>
+                <code>git init</code>
+                <p>
+                    Створює новий локальний Git-репозиторій
+                    у поточній папці.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3>2. git clone</h3>
+                <code>git clone URL</code>
+                <p>
+                    Копіює існуючий віддалений репозиторій
+                    на комп'ютер.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3>3. git status</h3>
+                <code>git status</code>
+                <p>
+                    Показує поточний стан файлів
+                    та репозиторію.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3>4. git add</h3>
+                <code>git add .</code>
+                <p>
+                    Додає зміни до індексу перед створенням
+                    коміту.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3>5. git commit</h3>
+                <code>git commit -m "Опис змін"</code>
+                <p>
+                    Зберігає підготовлені зміни в історії Git.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3>6. git log</h3>
+                <code>git log</code>
+                <p>
+                    Показує історію комітів репозиторію.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3>7. git branch</h3>
+                <code>git branch</code>
+                <p>
+                    Показує існуючі гілки або використовується
+                    для створення нових гілок.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3>8. git switch</h3>
+                <code>git switch назва-гілки</code>
+                <p>
+                    Перемикає користувача на іншу гілку.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3>9. git pull</h3>
+                <code>git pull</code>
+                <p>
+                    Завантажує зміни з віддаленого репозиторію
+                    та об'єднує їх з локальною версією.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3>10. git push</h3>
+                <code>git push</code>
+                <p>
+                    Відправляє локальні коміти
+                    до віддаленого репозиторію.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section id="certificate" class="section dark">
+    <div class="container">
+
+        <h2>Сертифікат курсу по Git</h2>
+
+        <p>
+            Тут розміщено сертифікат проходження навчального
+            курсу з основ роботи з Git.
+        </p>
+
+        <div class="certificate">
+            <img src="certificate.jpg"
+                 alt="Сертифікат курсу Git">
+        </div>
+
+    </div>
+</section>
+
+
+<section id="sources" class="section">
+    <div class="container">
+
+        <h2>Джерела інформації</h2>
+
+        <ul class="sources">
+
+            <li>
+                <a href="https://git-scm.com/docs"
+                   target="_blank">
+                    Офіційна документація Git
+                </a>
+            </li>
+
+            <li>
+                <a href="https://git-scm.com/book/uk/v2"
+                   target="_blank">
+                    Pro Git — книга українською
+                </a>
+            </li>
+
+            <li>
+                <a href="https://docs.github.com/"
+                   target="_blank">
+                    GitHub Docs
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.atlassian.com/git/tutorials"
+                   target="_blank">
+                    Atlassian Git Tutorials
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</section>
+
+</main>
+
+
+<footer>
+    <p>Навчальний проєкт про Git</p>
+    <p>Виконав: Сергій Шабала</p>
+</footer>
+
+</body>
+</html>
