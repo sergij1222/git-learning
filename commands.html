@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="uk">
 
 <head>
@@ -6,209 +7,432 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux CLI</title>
     <link rel="stylesheet" href="style.css">
+
+```
+<style>
+    /* =========================
+       INTERACTIVE TERMINAL
+    ========================= */
+
+    .interactive-terminal {
+        max-width: 950px;
+        margin: 45px auto 0;
+
+        background: #080d11;
+
+        border: 1px solid #303c47;
+        border-radius: 14px;
+
+        overflow: hidden;
+
+        box-shadow:
+            0 20px 45px rgba(0, 0, 0, 0.4);
+    }
+
+    .interactive-terminal-top {
+        display: flex;
+        align-items: center;
+
+        gap: 7px;
+
+        padding: 14px 18px;
+
+        background: #111920;
+
+        border-bottom: 1px solid #26323d;
+    }
+
+    .interactive-terminal-top span {
+        width: 10px;
+        height: 10px;
+
+        border-radius: 50%;
+
+        display: block;
+
+        background: #596570;
+    }
+
+    .terminal-title {
+        margin-left: 10px;
+
+        color: #7f8b97;
+
+        font-family:
+            Consolas,
+            "Courier New",
+            monospace;
+
+        font-size: 12px;
+    }
+
+    .interactive-terminal-body {
+        height: 390px;
+
+        padding: 22px;
+
+        overflow-y: auto;
+
+        font-family:
+            Consolas,
+            "Courier New",
+            monospace;
+
+        font-size: 14px;
+
+        color: #d5dde5;
+    }
+
+    .terminal-line {
+        margin: 6px 0;
+
+        white-space: pre-wrap;
+
+        word-break: break-word;
+    }
+
+    .terminal-prompt {
+        color: #45ff91;
+    }
+
+    .terminal-command {
+        color: #ffffff;
+    }
+
+    .terminal-result {
+        color: #cbd4dc;
+    }
+
+    .terminal-error {
+        color: #ff7777;
+    }
+
+    .terminal-success {
+        color: #45ff91;
+    }
+
+    .terminal-input-line {
+        display: flex;
+
+        align-items: center;
+
+        gap: 7px;
+
+        padding: 16px 22px;
+
+        background: #0c1319;
+
+        border-top: 1px solid #26323d;
+    }
+
+    .terminal-input-prompt {
+        color: #45ff91;
+
+        font-family:
+            Consolas,
+            "Courier New",
+            monospace;
+
+        font-size: 14px;
+
+        white-space: nowrap;
+    }
+
+    #terminalInput {
+        flex: 1;
+
+        min-width: 0;
+
+        background: transparent;
+
+        border: none;
+        outline: none;
+
+        color: white;
+
+        font-family:
+            Consolas,
+            "Courier New",
+            monospace;
+
+        font-size: 14px;
+    }
+
+    #terminalInput::placeholder {
+        color: #596570;
+    }
+
+    .terminal-help {
+        max-width: 950px;
+
+        margin: 18px auto 0;
+
+        padding: 15px 20px;
+
+        border-left: 3px solid #f0a500;
+
+        background:
+            rgba(240, 165, 0, 0.06);
+
+        border-radius: 8px;
+
+        color: #9eabb7;
+
+        font-size: 14px;
+    }
+
+    .terminal-help strong {
+        color: #f0a500;
+    }
+
+    @media (max-width: 600px) {
+
+        .interactive-terminal-body {
+            height: 350px;
+
+            padding: 16px;
+
+            font-size: 12px;
+        }
+
+        .terminal-input-line {
+            padding: 14px 16px;
+        }
+
+        .terminal-input-prompt {
+            font-size: 12px;
+        }
+
+        #terminalInput {
+            font-size: 12px;
+        }
+
+    }
+</style>
+```
+
 </head>
 
 <body>
 
 <header class="page-header">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="page-title-icon">
-            $_
-        </div>
-
-        <h1>Linux CLI</h1>
-
-        <p>
-            Базові команди командного рядка
-        </p>
-
-        <nav>
-
-            <a href="index.html">
-                Головна
-            </a>
-
-            <a href="commands.html" class="active">
-                Linux CLI
-            </a>
-
-            <a href="bash.html">
-                BASH
-            </a>
-
-            <a href="sources.html">
-                Джерела
-            </a>
-
-        </nav>
-
+    <div class="page-title-icon">
+        $_
     </div>
+
+    <h1>Linux CLI</h1>
+
+    <p>
+        Базові команди командного рядка
+    </p>
+
+    <nav>
+
+        <a href="index.html">
+            Головна
+        </a>
+
+        <a href="commands.html" class="active">
+            Linux CLI
+        </a>
+
+        <a href="bash.html">
+            BASH
+        </a>
+
+        <a href="sources.html">
+            Джерела
+        </a>
+
+    </nav>
+
+</div>
+```
 
 </header>
 
-
 <main>
 
-    <section class="section">
+<section class="section">
 
-        <div class="container">
+```
+<div class="container">
 
-            <div class="section-intro">
+    <div class="section-intro">
 
-                <span class="terminal-label">
-                    LINUX TERMINAL
-                </span>
+        <span class="terminal-label">
+            LINUX TERMINAL
+        </span>
 
-                <h2>10 базових команд Linux</h2>
+        <h2>10 базових команд Linux</h2>
 
-                <p>
-                    Командний рядок Linux дозволяє керувати файлами,
-                    папками та системою за допомогою текстових команд.
-                </p>
+        <p>
+            Командний рядок Linux дозволяє керувати файлами,
+            папками та системою за допомогою текстових команд.
+            Нижче наведені основні команди та приклади їх використання.
+        </p>
 
+    </div>
+
+
+    <!-- =========================
+         INTERACTIVE TERMINAL
+    ========================== -->
+
+    <div class="interactive-terminal">
+
+        <div class="interactive-terminal-top">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span class="terminal-title">
+                serhii@linux — bash
+            </span>
+
+        </div>
+
+
+        <div
+            class="interactive-terminal-body"
+            id="terminalOutput"
+            aria-live="polite"
+        >
+
+            <div class="terminal-line terminal-success">
+                Welcome to the Linux terminal!
             </div>
 
+            <div class="terminal-line terminal-result">
+                Введіть <strong>help</strong>, щоб переглянути доступні команди.
+            </div>
 
-            <div class="commands">
-
-                <div class="command">
-                    <div class="command-number">01</div>
-                    <h3>pwd</h3>
-                    <code>pwd</code>
-                    <p>
-                        Показує повний шлях до поточної папки.
-                    </p>
-                </div>
-
-                <div class="command">
-                    <div class="command-number">02</div>
-                    <h3>echo</h3>
-                    <code>echo "Hello Linux"</code>
-                    <p>
-                        Виводить текст або значення змінної на екран.
-                    </p>
-                </div>
-
-                <div class="command">
-                    <div class="command-number">03</div>
-                    <h3>ls</h3>
-                    <code>ls</code>
-                    <p>
-                        Показує файли та папки у поточному каталозі.
-                    </p>
-                </div>
-
-                <div class="command">
-                    <div class="command-number">04</div>
-                    <h3>cd</h3>
-                    <code>cd Documents</code>
-                    <p>
-                        Використовується для переходу в іншу папку.
-                    </p>
-                </div>
-
-                <div class="command">
-                    <div class="command-number">05</div>
-                    <h3>touch</h3>
-                    <code>touch file.txt</code>
-                    <p>
-                        Створює новий порожній файл.
-                    </p>
-                </div>
-
-                <div class="command">
-                    <div class="command-number">06</div>
-                    <h3>mkdir</h3>
-                    <code>mkdir test</code>
-                    <p>
-                        Створює нову папку.
-                    </p>
-                </div>
-
-                <div class="command">
-                    <div class="command-number">07</div>
-                    <h3>cp</h3>
-                    <code>cp file.txt copy.txt</code>
-                    <p>
-                        Копіює файл або папку.
-                    </p>
-                </div>
-
-                <div class="command">
-                    <div class="command-number">08</div>
-                    <h3>mv</h3>
-                    <code>mv file.txt Documents/</code>
-                    <p>
-                        Переміщує або перейменовує файл чи папку.
-                    </p>
-                </div>
-
-                <div class="command">
-                    <div class="command-number">09</div>
-                    <h3>rm</h3>
-                    <code>rm file.txt</code>
-                    <p>
-                        Видаляє файл.
-                    </p>
-                </div>
-
-                <div class="command">
-                    <div class="command-number">10</div>
-                    <h3>history</h3>
-                    <code>history</code>
-                    <p>
-                        Показує список команд, які виконувалися раніше.
-                    </p>
-                </div>
-
+            <div class="terminal-line terminal-result">
+                Спробуйте: pwd, ls, cd, mkdir, touch, echo Hello
             </div>
 
         </div>
 
-    </section>
+
+        <div class="terminal-input-line">
+
+            <span
+                class="terminal-input-prompt"
+                id="terminalPrompt"
+            >
+                serhii@linux:~$
+            </span>
+
+            <input
+                type="text"
+                id="terminalInput"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Введіть команду..."
+                aria-label="Команда Linux"
+            >
+
+        </div>
+
+    </div>
 
 
-    <section class="section dark">
+    <div class="terminal-help">
 
-        <div class="container">
+        <strong>Підказка:</strong>
+        введи <strong>help</strong>, щоб побачити всі доступні команди.
+        Для виконання команди натисни <strong>Enter</strong>.
 
-            <div class="terminal-demo">
+    </div>
 
-                <div class="terminal-demo-top">
-                    <span>●</span>
-                    <span>●</span>
-                    <span>●</span>
-                    <span class="terminal-name">
-                        bash — terminal
-                    </span>
+
+    <!-- =========================
+         COMMAND CARDS
+    ========================== -->
+
+    <div class="commands">
+
+
+        <!-- PWD -->
+
+        <div class="command">
+
+            <div class="command-number">
+                01
+            </div>
+
+            <h3>pwd</h3>
+
+            <p class="command-description">
+                Показує повний шлях до поточної папки.
+            </p>
+
+            <div class="mini-terminal">
+
+                <div class="mini-terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
 
-                <div class="terminal-content">
+                <div class="mini-terminal-body">
 
                     <p>
-                        <span class="green">serhii@linux</span>:~$ pwd
+                        <span class="prompt">
+                            serhii@linux:~$
+                        </span>
+                        pwd
                     </p>
 
-                    <p>
+                    <p class="terminal-output">
                         /home/serhii
                     </p>
 
-                    <p>
-                        <span class="green">serhii@linux</span>:~$ mkdir linux-project
-                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ECHO -->
+
+        <div class="command">
+
+            <div class="command-number">
+                02
+            </div>
+
+            <h3>echo</h3>
+
+            <p class="command-description">
+                Виводить текст або значення змінної на екран.
+            </p>
+
+            <div class="mini-terminal">
+
+                <div class="mini-terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mini-terminal-body">
 
                     <p>
-                        <span class="green">serhii@linux</span>:~$ cd linux-project
+                        <span class="prompt">
+                            serhii@linux:~$
+                        </span>
+                        echo "Hello Linux"
                     </p>
 
-                    <p>
-                        <span class="green">serhii@linux</span>:~/linux-project$
-                    </p>
-
-                    <p class="orange">
-                        Ready to work!
+                    <p class="terminal-output">
+                        Hello Linux
                     </p>
 
                 </div>
@@ -217,22 +441,1153 @@
 
         </div>
 
-    </section>
+
+        <!-- LS -->
+
+        <div class="command">
+
+            <div class="command-number">
+                03
+            </div>
+
+            <h3>ls</h3>
+
+            <p class="command-description">
+                Показує файли та папки у поточному каталозі.
+            </p>
+
+            <div class="mini-terminal">
+
+                <div class="mini-terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mini-terminal-body">
+
+                    <p>
+                        <span class="prompt">
+                            serhii@linux:~$
+                        </span>
+                        ls
+                    </p>
+
+                    <p class="terminal-output">
+                        Documents&nbsp;&nbsp; Downloads&nbsp;&nbsp; Music
+                    </p>
+
+                    <p class="terminal-output">
+                        Pictures&nbsp;&nbsp; Videos&nbsp;&nbsp; file.txt
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CD -->
+
+        <div class="command">
+
+            <div class="command-number">
+                04
+            </div>
+
+            <h3>cd</h3>
+
+            <p class="command-description">
+                Використовується для переходу в іншу папку.
+            </p>
+
+            <div class="mini-terminal">
+
+                <div class="mini-terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mini-terminal-body">
+
+                    <p>
+                        <span class="prompt">
+                            serhii@linux:~$
+                        </span>
+                        cd Documents
+                    </p>
+
+                    <p class="terminal-output">
+                        serhii@linux:~/Documents$
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOUCH -->
+
+        <div class="command">
+
+            <div class="command-number">
+                05
+            </div>
+
+            <h3>touch</h3>
+
+            <p class="command-description">
+                Створює новий порожній файл.
+            </p>
+
+            <div class="mini-terminal">
+
+                <div class="mini-terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mini-terminal-body">
+
+                    <p>
+                        <span class="prompt">
+                            serhii@linux:~$
+                        </span>
+                        touch file.txt
+                    </p>
+
+                    <p class="terminal-output">
+                        serhii@linux:~$
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MKDIR -->
+
+        <div class="command">
+
+            <div class="command-number">
+                06
+            </div>
+
+            <h3>mkdir</h3>
+
+            <p class="command-description">
+                Створює нову папку.
+            </p>
+
+            <div class="mini-terminal">
+
+                <div class="mini-terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mini-terminal-body">
+
+                    <p>
+                        <span class="prompt">
+                            serhii@linux:~$
+                        </span>
+                        mkdir test
+                    </p>
+
+                    <p class="terminal-output">
+                        serhii@linux:~$
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CP -->
+
+        <div class="command">
+
+            <div class="command-number">
+                07
+            </div>
+
+            <h3>cp</h3>
+
+            <p class="command-description">
+                Копіює файл або папку.
+            </p>
+
+            <div class="mini-terminal">
+
+                <div class="mini-terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mini-terminal-body">
+
+                    <p>
+                        <span class="prompt">
+                            serhii@linux:~$
+                        </span>
+                        cp file.txt copy.txt
+                    </p>
+
+                    <p class="terminal-output">
+                        serhii@linux:~$
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MV -->
+
+        <div class="command">
+
+            <div class="command-number">
+                08
+            </div>
+
+            <h3>mv</h3>
+
+            <p class="command-description">
+                Переміщує або перейменовує файл чи папку.
+            </p>
+
+            <div class="mini-terminal">
+
+                <div class="mini-terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mini-terminal-body">
+
+                    <p>
+                        <span class="prompt">
+                            serhii@linux:~$
+                        </span>
+                        mv file.txt Documents/
+                    </p>
+
+                    <p class="terminal-output">
+                        serhii@linux:~$
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RM -->
+
+        <div class="command">
+
+            <div class="command-number">
+                09
+            </div>
+
+            <h3>rm</h3>
+
+            <p class="command-description">
+                Видаляє файл.
+            </p>
+
+            <div class="mini-terminal">
+
+                <div class="mini-terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mini-terminal-body">
+
+                    <p>
+                        <span class="prompt">
+                            serhii@linux:~$
+                        </span>
+                        rm file.txt
+                    </p>
+
+                    <p class="terminal-output">
+                        serhii@linux:~$
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HISTORY -->
+
+        <div class="command">
+
+            <div class="command-number">
+                10
+            </div>
+
+            <h3>history</h3>
+
+            <p class="command-description">
+                Показує список команд, які виконувалися раніше.
+            </p>
+
+            <div class="mini-terminal">
+
+                <div class="mini-terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mini-terminal-body">
+
+                    <p>
+                        <span class="prompt">
+                            serhii@linux:~$
+                        </span>
+                        history
+                    </p>
+
+                    <p class="terminal-output">
+                        1&nbsp;&nbsp; pwd
+                    </p>
+
+                    <p class="terminal-output">
+                        2&nbsp;&nbsp; ls
+                    </p>
+
+                    <p class="terminal-output">
+                        3&nbsp;&nbsp; cd Documents
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<section class="section dark">
+
+```
+<div class="container">
+
+    <div class="terminal-demo">
+
+        <div class="terminal-demo-top">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span class="terminal-name">
+                bash — terminal
+            </span>
+
+        </div>
+
+        <div class="terminal-content">
+
+            <p>
+                <span class="green">
+                    serhii@linux
+                </span>:~$ pwd
+            </p>
+
+            <p>
+                /home/serhii
+            </p>
+
+            <p>
+                <span class="green">
+                    serhii@linux
+                </span>:~$ mkdir linux-project
+            </p>
+
+            <p>
+                <span class="green">
+                    serhii@linux
+                </span>:~$ cd linux-project
+            </p>
+
+            <p>
+                <span class="green">
+                    serhii@linux
+                </span>:~/linux-project$
+            </p>
+
+            <p class="orange">
+                Ready to work!
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
 
 </main>
 
-
 <footer>
 
-    <p>
-        Навчальний проєкт про GNU/Linux
-    </p>
+```
+<p>
+    Навчальний проєкт про GNU/Linux
+</p>
 
-    <p>
-        Виконав: Сергій Шабала
-    </p>
+<p>
+    Виконав: Сергій Шабала
+</p>
+```
 
 </footer>
 
+<script>
+
+    const terminalOutput =
+        document.getElementById("terminalOutput");
+
+    const terminalInput =
+        document.getElementById("terminalInput");
+
+    const terminalPrompt =
+        document.getElementById("terminalPrompt");
+
+
+    let currentPath = "/home/serhii";
+
+    let currentDirectory = "~";
+
+
+    let history = [];
+
+
+    let fileSystem = {
+
+        "/home/serhii": {
+            folders: [
+                "Documents",
+                "Downloads",
+                "Music",
+                "Pictures",
+                "Videos"
+            ],
+
+            files: [
+                "file.txt"
+            ]
+        }
+
+    };
+
+
+    function getPath() {
+
+        if (currentDirectory === "~") {
+            return "/home/serhii";
+        }
+
+        return currentPath;
+
+    }
+
+
+    function updatePrompt() {
+
+        terminalPrompt.textContent =
+            "serhii@linux:" +
+            currentDirectory +
+            "$";
+
+    }
+
+
+    function addLine(text, className = "terminal-result") {
+
+        const line =
+            document.createElement("div");
+
+        line.className =
+            "terminal-line " + className;
+
+        line.textContent = text;
+
+        terminalOutput.appendChild(line);
+
+        terminalOutput.scrollTop =
+            terminalOutput.scrollHeight;
+
+    }
+
+
+    function addCommandLine(command) {
+
+        const line =
+            document.createElement("div");
+
+        line.className =
+            "terminal-line";
+
+        const prompt =
+            document.createElement("span");
+
+        prompt.className =
+            "terminal-prompt";
+
+        prompt.textContent =
+            "serhii@linux:" +
+            currentDirectory +
+            "$ ";
+
+        const commandText =
+            document.createElement("span");
+
+        commandText.className =
+            "terminal-command";
+
+        commandText.textContent =
+            command;
+
+        line.appendChild(prompt);
+
+        line.appendChild(commandText);
+
+        terminalOutput.appendChild(line);
+
+    }
+
+
+    function getCurrentFolder() {
+
+        if (!fileSystem[currentPath]) {
+
+            fileSystem[currentPath] = {
+
+                folders: [],
+                files: []
+
+            };
+
+        }
+
+        return fileSystem[currentPath];
+
+    }
+
+
+    function executeCommand(input) {
+
+        const command =
+            input.trim();
+
+        if (!command) {
+            return;
+        }
+
+
+        history.push(command);
+
+
+        addCommandLine(command);
+
+
+        const parts =
+            command.split(/\s+/);
+
+        const cmd =
+            parts[0];
+
+        const args =
+            parts.slice(1);
+
+
+        /* HELP */
+
+        if (cmd === "help") {
+
+            addLine(
+                "Доступні команди:"
+            );
+
+            addLine(
+                "pwd       — показати поточний шлях"
+            );
+
+            addLine(
+                "echo      — вивести текст"
+            );
+
+            addLine(
+                "ls        — показати файли та папки"
+            );
+
+            addLine(
+                "cd        — перейти в папку"
+            );
+
+            addLine(
+                "touch     — створити файл"
+            );
+
+            addLine(
+                "mkdir     — створити папку"
+            );
+
+            addLine(
+                "cp        — скопіювати файл"
+            );
+
+            addLine(
+                "mv        — перемістити або перейменувати"
+            );
+
+            addLine(
+                "rm        — видалити файл"
+            );
+
+            addLine(
+                "history   — показати історію команд"
+            );
+
+            addLine(
+                "clear     — очистити термінал"
+            );
+
+            addLine(
+                "help      — показати допомогу"
+            );
+
+            return;
+
+        }
+
+
+        /* CLEAR */
+
+        if (cmd === "clear") {
+
+            terminalOutput.innerHTML = "";
+
+            return;
+
+        }
+
+
+        /* PWD */
+
+        if (cmd === "pwd") {
+
+            addLine(
+                getPath()
+            );
+
+            return;
+
+        }
+
+
+        /* ECHO */
+
+        if (cmd === "echo") {
+
+            addLine(
+                args.join(" ")
+                    .replace(/^["']|["']$/g, "")
+            );
+
+            return;
+
+        }
+
+
+        /* LS */
+
+        if (cmd === "ls") {
+
+            const folder =
+                getCurrentFolder();
+
+            const result = [
+                ...folder.folders,
+                ...folder.files
+            ];
+
+            if (result.length === 0) {
+
+                return;
+
+            }
+
+            addLine(
+                result.join("    ")
+            );
+
+            return;
+
+        }
+
+
+        /* CD */
+
+        if (cmd === "cd") {
+
+            if (args.length === 0) {
+
+                currentPath =
+                    "/home/serhii";
+
+                currentDirectory =
+                    "~";
+
+                updatePrompt();
+
+                return;
+
+            }
+
+
+            const target =
+                args[0];
+
+
+            if (target === "..") {
+
+                if (
+                    currentPath !==
+                    "/home/serhii"
+                ) {
+
+                    currentPath =
+                        "/home/serhii";
+
+                    currentDirectory =
+                        "~";
+
+                }
+
+                updatePrompt();
+
+                return;
+
+            }
+
+
+            if (
+                target === "~"
+            ) {
+
+                currentPath =
+                    "/home/serhii";
+
+                currentDirectory =
+                    "~";
+
+                updatePrompt();
+
+                return;
+
+            }
+
+
+            const folder =
+                getCurrentFolder();
+
+
+            if (
+                folder.folders.includes(target)
+            ) {
+
+                if (
+                    currentPath ===
+                    "/home/serhii"
+                ) {
+
+                    currentPath =
+                        "/home/serhii/" +
+                        target;
+
+                }
+
+                currentDirectory =
+                    currentPath
+                        .replace(
+                            "/home/serhii",
+                            "~"
+                        );
+
+                if (
+                    !fileSystem[currentPath]
+                ) {
+
+                    fileSystem[currentPath] = {
+
+                        folders: [],
+                        files: []
+
+                    };
+
+                }
+
+                updatePrompt();
+
+                return;
+
+            }
+
+
+            addLine(
+                "bash: cd: " +
+                target +
+                ": Немає такого каталогу",
+                "terminal-error"
+            );
+
+            return;
+
+        }
+
+
+        /* TOUCH */
+
+        if (cmd === "touch") {
+
+            if (args.length === 0) {
+
+                addLine(
+                    "touch: не вказано файл",
+                    "terminal-error"
+                );
+
+                return;
+
+            }
+
+
+            const folder =
+                getCurrentFolder();
+
+
+            args.forEach(file => {
+
+                if (
+                    !folder.files.includes(file)
+                ) {
+
+                    folder.files.push(file);
+
+                }
+
+            });
+
+            return;
+
+        }
+
+
+        /* MKDIR */
+
+        if (cmd === "mkdir") {
+
+            if (args.length === 0) {
+
+                addLine(
+                    "mkdir: не вказано назву папки",
+                    "terminal-error"
+                );
+
+                return;
+
+            }
+
+
+            const folder =
+                getCurrentFolder();
+
+
+            args.forEach(name => {
+
+                if (
+                    !folder.folders.includes(name)
+                ) {
+
+                    folder.folders.push(name);
+
+                }
+
+            });
+
+            return;
+
+        }
+
+
+        /* CP */
+
+        if (cmd === "cp") {
+
+            if (args.length < 2) {
+
+                addLine(
+                    "cp: потрібно вказати джерело та призначення",
+                    "terminal-error"
+                );
+
+                return;
+
+            }
+
+
+            const source =
+                args[0];
+
+            const destination =
+                args[1];
+
+
+            const folder =
+                getCurrentFolder();
+
+
+            if (
+                !folder.files.includes(source)
+            ) {
+
+                addLine(
+                    "cp: не знайдено файл " +
+                    source,
+                    "terminal-error"
+                );
+
+                return;
+
+            }
+
+
+            if (
+                !folder.files.includes(destination)
+            ) {
+
+                folder.files.push(
+                    destination
+                );
+
+            }
+
+            return;
+
+        }
+
+
+        /* MV */
+
+        if (cmd === "mv") {
+
+            if (args.length < 2) {
+
+                addLine(
+                    "mv: потрібно вказати джерело та призначення",
+                    "terminal-error"
+                );
+
+                return;
+
+            }
+
+
+            const source =
+                args[0];
+
+            const destination =
+                args[1];
+
+
+            const folder =
+                getCurrentFolder();
+
+
+            const index =
+                folder.files.indexOf(source);
+
+
+            if (index === -1) {
+
+                addLine(
+                    "mv: не знайдено файл " +
+                    source,
+                    "terminal-error"
+                );
+
+                return;
+
+            }
+
+
+            folder.files.splice(
+                index,
+                1
+            );
+
+
+            folder.files.push(
+                destination.replace("/", "")
+            );
+
+            return;
+
+        }
+
+
+        /* RM */
+
+        if (cmd === "rm") {
+
+            if (args.length === 0) {
+
+                addLine(
+                    "rm: не вказано файл",
+                    "terminal-error"
+                );
+
+                return;
+
+            }
+
+
+            const folder =
+                getCurrentFolder();
+
+
+            args.forEach(file => {
+
+                const index =
+                    folder.files.indexOf(file);
+
+
+                if (index !== -1) {
+
+                    folder.files.splice(
+                        index,
+                        1
+                    );
+
+                }
+
+            });
+
+            return;
+
+        }
+
+
+        /* HISTORY */
+
+        if (cmd === "history") {
+
+            history.forEach(
+                (item, index) => {
+
+                    addLine(
+                        (index + 1) +
+                        "  " +
+                        item
+                    );
+
+                }
+            );
+
+            return;
+
+        }
+
+
+        /* UNKNOWN COMMAND */
+
+        addLine(
+            "bash: " +
+            cmd +
+            ": команда не знайдена",
+            "terminal-error"
+        );
+
+    }
+
+
+    terminalInput.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                const command =
+                    terminalInput.value;
+
+                terminalInput.value = "";
+
+                executeCommand(command);
+
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target !== terminalInput
+            ) {
+
+                terminalInput.focus();
+
+            }
+
+        }
+    );
+
+
+    updatePrompt();
+
+    terminalInput.focus();
+
+</script>
+
 </body>
+
 </html>

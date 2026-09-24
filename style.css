@@ -1390,3 +1390,133 @@ footer p:last-child {
         padding: 16px;
     }
 }
+/* =========================
+   COMMAND DESCRIPTION
+========================= */
+
+.command-description {
+    color: #aeb9c5;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   MINI TERMINAL
+========================= */
+
+.mini-terminal {
+    margin-top: 18px;
+
+    background: #080d11;
+
+    border: 1px solid #303c47;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.mini-terminal-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 10px 13px;
+
+    background: #111920;
+
+    border-bottom:
+        1px solid #26323d;
+}
+
+.mini-terminal-top span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #596570;
+
+    display: block;
+}
+
+.mini-terminal-body {
+    padding: 16px;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 13px;
+
+    min-height: 90px;
+}
+
+.mini-terminal-body p {
+    margin: 4px 0;
+
+    color: #cbd4dc;
+}
+
+.mini-terminal-body .prompt {
+    color: #45ff91;
+}
+
+.terminal-output {
+    color: #d6dde5 !important;
+
+    padding-left: 0;
+}
+
+
+/* =========================
+   COMMAND HOVER
+========================= */
+
+.command:hover .mini-terminal {
+    border-color:
+        rgba(69, 255, 145, 0.25);
+
+    box-shadow:
+        0 0 20px rgba(69, 255, 145, 0.04);
+}
+
+.command:hover .prompt {
+    color: #f0a500;
+}
+
+
+/* =========================
+   COMMAND NUMBER
+========================= */
+
+.command-number {
+    transition: 0.3s ease;
+}
+
+.command:hover .command-number {
+    color: #f0a500;
+}
+
+
+/* =========================
+   MOBILE MINI TERMINAL
+========================= */
+
+@media (max-width: 500px) {
+
+    .mini-terminal-body {
+        padding: 13px;
+
+        font-size: 11px;
+
+        overflow-x: auto;
+    }
+
+}
