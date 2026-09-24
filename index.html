@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Git — системи контролю версій</title>
-
+    <title>GNU/Linux</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,283 +12,361 @@
 
 <header>
     <div class="container">
-        <h1>Git</h1>
-        <p>Система контролю версій для розробників</p>
+
+        <div class="hero-linux">
+
+            <div class="hero-text">
+
+                <span class="terminal-label">
+                    OPEN SOURCE • LINUX • GNU
+                </span>
+
+                <h1>GNU/Linux</h1>
+
+                <p>
+                    Операційна система з відкритим кодом
+                </p>
+
+                <div class="hero-terminal">
+
+                    <div class="terminal-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <p>
+                        <span class="green">serhii@linux</span>:~$ whoami
+                    </p>
+
+                    <p>serhii</p>
+
+                    <p>
+                        <span class="green">serhii@linux</span>:~$ echo "Hello Linux!"
+                    </p>
+
+                    <p class="orange">
+                        Hello Linux!
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tux-box">
+                <div class="tux-circle">🐧</div>
+                <span>LINUX</span>
+            </div>
+
+        </div>
 
         <nav>
-            <a href="#about">Про Git</a>
-            <a href="#advantages">Переваги</a>
-            <a href="#commands">Команди</a>
-            <a href="#certificate">Сертифікат</a>
-            <a href="#sources">Джерела</a>
+            <a href="index.html" class="active">Головна</a>
+            <a href="commands.html">Linux CLI</a>
+            <a href="bash.html">BASH</a>
+            <a href="sources.html">Джерела</a>
         </nav>
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>OPEN</strong>
+                <span>Source</span>
+            </div>
+
+            <div class="stat">
+                <strong>CLI</strong>
+                <span>Terminal</span>
+            </div>
+
+            <div class="stat">
+                <strong>GNU</strong>
+                <span>Project</span>
+            </div>
+
+            <div class="stat">
+                <strong>10</strong>
+                <span>Commands</span>
+            </div>
+
+        </div>
+
     </div>
 </header>
 
+
 <main>
 
-<section id="about" class="section">
-    <div class="container">
+    <section class="section">
 
-        <h2>Що таке система контролю версій?</h2>
+        <div class="container">
 
-        <p>
-            Система контролю версій — це програмне забезпечення,
-            яке дозволяє відстежувати зміни у файлах проєкту,
-            зберігати різні версії та повертатися до попередніх
-            станів проєкту.
-        </p>
+            <h2>Що таке GNU/Linux?</h2>
 
-        <p>
-            Системи контролю версій особливо важливі під час
-            розробки програмного забезпечення, оскільки над одним
-            проєктом часто працює декілька людей.
-        </p>
+            <p>
+                GNU/Linux — це операційна система з відкритим програмним кодом,
+                яка використовується на комп'ютерах, серверах та інших пристроях.
+            </p>
 
-        <h2>Що таке Git?</h2>
+            <p>
+                Основою системи є ядро Linux, а різні програми та компоненти GNU
+                допомагають користувачу працювати з операційною системою.
+            </p>
 
-        <p>
-            <strong>Git</strong> — це розподілена система контролю
-            версій, яка використовується для відстеження змін
-            у файлах та керування програмними проєктами.
-        </p>
+            <div class="info-highlight">
 
-        <p>
-            Git був створений Лінусом Торвальдсом у 2005 році.
-            Сьогодні Git є одним із найпоширеніших інструментів
-            для роботи з програмним кодом.
-        </p>
+                <div class="info-box">
 
-    </div>
-</section>
+                    <h3>Відкритий код</h3>
 
+                    <p>
+                        Код Linux доступний для перегляду та зміни.
+                        Це дозволяє розробникам створювати власні рішення
+                        та покращувати систему.
+                    </p>
 
-<section id="advantages" class="section dark">
-    <div class="container">
+                </div>
 
-        <h2>Основні можливості та переваги Git</h2>
+                <div class="info-box">
 
-        <div class="cards">
+                    <h3>Велика кількість систем</h3>
 
-            <div class="card">
-                <h3>Історія змін</h3>
-                <p>
-                    Git зберігає інформацію про зміни файлів,
-                    тому можна переглядати історію роботи над проєктом.
-                </p>
-            </div>
+                    <p>
+                        На основі Linux створено багато різних дистрибутивів,
+                        які призначені для різних завдань і користувачів.
+                    </p>
 
-            <div class="card">
-                <h3>Гілки</h3>
-                <p>
-                    Branch дозволяє створювати окремі гілки
-                    для розробки нових функцій.
-                </p>
-            </div>
+                </div>
 
-            <div class="card">
-                <h3>Командна робота</h3>
-                <p>
-                    Кілька розробників можуть працювати над одним
-                    проєктом та об'єднувати свої зміни.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Резервне зберігання</h3>
-                <p>
-                    Репозиторій можна зберігати на GitHub,
-                    що допомагає не втратити код.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Відновлення</h3>
-                <p>
-                    За необхідності можна повернутися
-                    до попередньої версії проєкту.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Безкоштовність</h3>
-                <p>
-                    Git є безкоштовним програмним забезпеченням
-                    з відкритим кодом.
-                </p>
             </div>
 
         </div>
 
-    </div>
-</section>
+    </section>
 
 
-<section id="commands" class="section">
-    <div class="container">
+    <section class="section dark">
 
-        <h2>10 базових команд Git</h2>
+        <div class="container">
 
-        <div class="commands">
+            <h2>Основні особливості Linux</h2>
 
-            <div class="command">
-                <h3>1. git init</h3>
-                <code>git init</code>
-                <p>
-                    Створює новий локальний Git-репозиторій
-                    у поточній папці.
-                </p>
-            </div>
+            <div class="cards">
 
-            <div class="command">
-                <h3>2. git clone</h3>
-                <code>git clone URL</code>
-                <p>
-                    Копіює існуючий віддалений репозиторій
-                    на комп'ютер.
-                </p>
-            </div>
+                <div class="card">
+                    <div class="feature-icon">⌨</div>
+                    <h3>Відкритий код</h3>
+                    <p>
+                        Вихідний код системи доступний для перегляду,
+                        вивчення та зміни.
+                    </p>
+                </div>
 
-            <div class="command">
-                <h3>3. git status</h3>
-                <code>git status</code>
-                <p>
-                    Показує поточний стан файлів
-                    та репозиторію.
-                </p>
-            </div>
+                <div class="card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Безпека</h3>
+                    <p>
+                        Linux має багато інструментів для керування
+                        користувачами, правами доступу та процесами.
+                    </p>
+                </div>
 
-            <div class="command">
-                <h3>4. git add</h3>
-                <code>git add .</code>
-                <p>
-                    Додає зміни до індексу перед створенням
-                    коміту.
-                </p>
-            </div>
+                <div class="card">
+                    <div class="feature-icon">⚙</div>
+                    <h3>Стабільність</h3>
+                    <p>
+                        Linux часто використовується на серверах,
+                        де важлива стабільна робота системи.
+                    </p>
+                </div>
 
-            <div class="command">
-                <h3>5. git commit</h3>
-                <code>git commit -m "Опис змін"</code>
-                <p>
-                    Зберігає підготовлені зміни в історії Git.
-                </p>
-            </div>
+                <div class="card">
+                    <div class="feature-icon">$_</div>
+                    <h3>Термінал</h3>
+                    <p>
+                        Через командний рядок можна виконувати багато
+                        операцій швидко та зручно.
+                    </p>
+                </div>
 
-            <div class="command">
-                <h3>6. git log</h3>
-                <code>git log</code>
-                <p>
-                    Показує історію комітів репозиторію.
-                </p>
-            </div>
+                <div class="card">
+                    <div class="feature-icon">◈</div>
+                    <h3>Дистрибутиви</h3>
+                    <p>
+                        Існує багато дистрибутивів Linux для різних
+                        потреб та рівнів користувачів.
+                    </p>
+                </div>
 
-            <div class="command">
-                <h3>7. git branch</h3>
-                <code>git branch</code>
-                <p>
-                    Показує існуючі гілки або використовується
-                    для створення нових гілок.
-                </p>
-            </div>
+                <div class="card">
+                    <div class="feature-icon">∞</div>
+                    <h3>Безкоштовність</h3>
+                    <p>
+                        Більшість популярних дистрибутивів Linux
+                        можна використовувати безкоштовно.
+                    </p>
+                </div>
 
-            <div class="command">
-                <h3>8. git switch</h3>
-                <code>git switch назва-гілки</code>
-                <p>
-                    Перемикає користувача на іншу гілку.
-                </p>
-            </div>
-
-            <div class="command">
-                <h3>9. git pull</h3>
-                <code>git pull</code>
-                <p>
-                    Завантажує зміни з віддаленого репозиторію
-                    та об'єднує їх з локальною версією.
-                </p>
-            </div>
-
-            <div class="command">
-                <h3>10. git push</h3>
-                <code>git push</code>
-                <p>
-                    Відправляє локальні коміти
-                    до віддаленого репозиторію.
-                </p>
             </div>
 
         </div>
 
-    </div>
-</section>
+    </section>
 
 
-<section id="certificate" class="section dark">
-    <div class="container">
+    <section class="section">
 
-        <h2>Сертифікат курсу по Git</h2>
+        <div class="container">
 
-        <p>
-            Тут розміщено сертифікат проходження навчального
-            курсу з основ роботи з Git.
-        </p>
+            <h2>Популярні дистрибутиви Linux</h2>
 
-        <div class="certificate">
-            <img src="certificate.jpg"
-                 alt="Сертифікат курсу Git">
+            <p>
+                Дистрибутив — це готова операційна система на основі ядра Linux,
+                яка містить необхідні програми та інструменти.
+            </p>
+
+            <div class="cards">
+
+                <div class="card distro-card">
+                    <div class="distro-icon ubuntu">U</div>
+                    <h3>Ubuntu</h3>
+                    <p>
+                        Один із найпопулярніших дистрибутивів Linux.
+                        Підходить для навчання, роботи та повсякденного використання.
+                    </p>
+                </div>
+
+                <div class="card distro-card">
+                    <div class="distro-icon debian">D</div>
+                    <h3>Debian</h3>
+                    <p>
+                        Відомий стабільністю та великою кількістю
+                        доступних програмних пакетів.
+                    </p>
+                </div>
+
+                <div class="card distro-card">
+                    <div class="distro-icon fedora">F</div>
+                    <h3>Fedora</h3>
+                    <p>
+                        Сучасний дистрибутив, який часто використовують
+                        для розробки програмного забезпечення.
+                    </p>
+                </div>
+
+                <div class="card distro-card">
+                    <div class="distro-icon arch">A</div>
+                    <h3>Arch Linux</h3>
+                    <p>
+                        Гнучкий дистрибутив, який дозволяє користувачу
+                        самостійно налаштовувати систему.
+                    </p>
+                </div>
+
+                <div class="card distro-card">
+                    <div class="distro-icon mint">M</div>
+                    <h3>Linux Mint</h3>
+                    <p>
+                        Зручний дистрибутив для користувачів,
+                        які переходять з інших операційних систем.
+                    </p>
+                </div>
+
+                <div class="card distro-card">
+                    <div class="distro-icon kali">K</div>
+                    <h3>Kali Linux</h3>
+                    <p>
+                        Дистрибутив, орієнтований на тестування безпеки
+                        та завдання кібербезпеки.
+                    </p>
+                </div>
+
+            </div>
+
         </div>
 
-    </div>
-</section>
+    </section>
 
 
-<section id="sources" class="section">
-    <div class="container">
+    <section class="section dark">
 
-        <h2>Джерела інформації</h2>
+        <div class="container">
 
-        <ul class="sources">
+            <h2>Розділи сайту</h2>
 
-            <li>
-                <a href="https://git-scm.com/docs"
-                   target="_blank">
-                    Офіційна документація Git
-                </a>
-            </li>
+            <p>
+                На інших сторінках можна ознайомитися з командами Linux CLI,
+                BASH-скриптом авторизації та джерелами інформації.
+            </p>
 
-            <li>
-                <a href="https://git-scm.com/book/uk/v2"
-                   target="_blank">
-                    Pro Git — книга українською
-                </a>
-            </li>
+            <div class="cards">
 
-            <li>
-                <a href="https://docs.github.com/"
-                   target="_blank">
-                    GitHub Docs
-                </a>
-            </li>
+                <div class="card">
 
-            <li>
-                <a href="https://www.atlassian.com/git/tutorials"
-                   target="_blank">
-                    Atlassian Git Tutorials
-                </a>
-            </li>
+                    <div class="feature-icon">$_</div>
 
-        </ul>
+                    <h3>Linux CLI</h3>
 
-    </div>
-</section>
+                    <p>
+                        10 базових команд для роботи
+                        з командним рядком Linux.
+                    </p>
+
+                    <a href="commands.html" class="button">
+                        Переглянути команди →
+                    </a>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="feature-icon">{ }</div>
+
+                    <h3>BASH</h3>
+
+                    <p>
+                        Приклад простого BASH-скрипту,
+                        який імітує авторизацію користувача.
+                    </p>
+
+                    <a href="bash.html" class="button">
+                        Переглянути скрипт →
+                    </a>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="feature-icon">↗</div>
+
+                    <h3>Джерела</h3>
+
+                    <p>
+                        Корисні офіційні сайти та документація
+                        для вивчення Linux і Bash.
+                    </p>
+
+                    <a href="sources.html" class="button">
+                        Переглянути джерела →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 
 
 <footer>
-    <p>Навчальний проєкт про Git</p>
+
+    <p>Навчальний проєкт про GNU/Linux</p>
+
     <p>Виконав: Сергій Шабала</p>
+
 </footer>
 
 </body>
